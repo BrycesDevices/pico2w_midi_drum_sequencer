@@ -12,6 +12,8 @@ Some additional library files and elements of code contained in this design have
  - https://github.com/hathach/tinyusb/blob/master/examples/device/midi_test/src/main.c
  - https://github.com/sztvka/pico-sh1106-c/tree/main
 
+PROJECT DESCRIPTION:
+
 The design is a 16 step sequencer with four programmable tracks. Each of step of the four 16 step tracks are represented by a rectangle on a 1.3" OLED display in a matrix. 
 Only one track is activated at a time for step editing and the active track is indicated at the top of the display by a number corresponding to a row in the matrix in decending order. 
 A track select button is used to select the active track by cycling through the track numbers. Each track is assigned to send a "note on" midi message during playback which triggers a 
@@ -39,3 +41,9 @@ stop functions within Logic Pro X using the software's built in controller assig
 Finally, there are four control knobs which are implemented by four potentiometers connected to individual channels of an external 8-channel MUX IC to save on ADC pins on the microcontroller. 
 The first three control knobs are assigned to control various MIDI controls by sending MIDI CC messages, such as MIDI volume, panning, and modulation wheel. The fourth control knob adjusts the 
 amount of swing in the sequence playback by adding a short delay to every other step in the sequence.
+
+BREADBOARD CONFIGURATION:
+
+<img width="1502" height="827" alt="good" src="https://github.com/user-attachments/assets/23c4acd3-a5ab-4489-aa7d-54abc8088222" />
+
+
